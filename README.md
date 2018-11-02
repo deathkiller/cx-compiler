@@ -1,6 +1,6 @@
-<h2 align="center">
+<h1 align="center">
     Cx Compiler
-</h2>
+</h1>
 
 <div align="center">
     Compiler for modified C language to i386 DOS executables
@@ -30,6 +30,27 @@ Requires [Microsoft Visual Studio 2015](https://www.visualstudio.com/) or newer 
 
 ## Example
 ```c
+bool BinarySearch(uint32* array, uint32 size, uint32 key, uint32* index) {
+    uint32 low, high, mid;
+    low = 0;
+    high = (size - 1);
+    while (low <= high) {
+        mid = (low + high) / 2;
+        if (key == array[mid]) {
+            index[0] = mid;
+            return true;
+        }
+
+        if (key < array[mid]) {
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+    
+    return false;
+}
+
 uint8 Main() {
     PrintString("Example application - Binary search\r\n");
     PrintNewLine();
@@ -63,37 +84,19 @@ uint8 Main() {
     PrintString("Enter number to find in the array: ");
     uint32 key = ReadUint32();
     PrintNewLine();
-
-    uint32 low, high, mid;
-    low = 0;
-    high = (size - 1);
-    bool found = false;
-    while (low <= high) {
-        mid = (low + high) / 2;
-        if (key == array[mid]) {
-            found = true;
-            break;
-        }
-
-        if (key < array[mid]) {
-            high = mid - 1;
-        } else {
-            low = mid + 1;
-        }
-    }
-
-    release(array);
     
-    PrintNewLine();
+    uint32 index = 0;
+    bool found = BinarySearch(array, size, key, &index);
     if (found == true) {
         PrintString("The number found on position: ");
-        PrintUint32(mid + 1);
+        PrintUint32(index + 1);
         PrintNewLine();
-        return 0;
     } else {
         PrintString("The number was not found!\r\n");
-        return 1;
     }
+    
+    release(array);
+    return 0;
 }
 ```
 

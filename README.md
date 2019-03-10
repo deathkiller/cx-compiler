@@ -18,7 +18,7 @@
 Compiler that supports modified version of C language and creates original DOS executables for i386 architecture. The executables run on MS-DOS, FreeDOS, 32-bit MS Windows using NTVDM, DosBox and other similar platforms. Currently supports several types of variables, pointers, dynamic memory allocation, branching and looping, includes and much more.
 
 [![License](https://img.shields.io/github/license/deathkiller/cx-compiler.svg)](https://github.com/deathkiller/cx-compiler/blob/master/LICENSE)
-[![Lines of Code](https://tokei.rs/b1/github/deathkiller/cx-compiler)](https://github.com/deathkiller/cx-compiler)
+[![Lines of Code](https://img.shields.io/badge/lines%20of%20code-10k-blue.svg)](https://github.com/deathkiller/cx-compiler/graphs/code-frequency)
 
 Requires [Microsoft Visual Studio 2015](https://www.visualstudio.com/) or newer (or equivalent C++11 compiler) to build the solution.
 

@@ -17,6 +17,7 @@
 ## Introduction
 Compiler that supports modified version of C language and creates original DOS executables for i386 architecture. The executables run on MS-DOS, FreeDOS, 32-bit MS Windows using NTVDM, DosBox and other similar platforms. Currently supports several types of variables, pointers, dynamic memory allocation, branching and looping, includes and much more.
 
+[![Code Quality](https://img.shields.io/codacy/grade/06fe278f2bdf43768bcc3615a482e42a.svg?logo=codacy&logoColor=ffffff)](https://www.codacy.com/app/deathkiller/cx-compiler)
 [![License](https://img.shields.io/github/license/deathkiller/cx-compiler.svg)](https://github.com/deathkiller/cx-compiler/blob/master/LICENSE)
 [![Lines of Code](https://img.shields.io/badge/lines%20of%20code-10k-blue.svg)](https://github.com/deathkiller/cx-compiler/graphs/code-frequency)
 
@@ -30,6 +31,7 @@ Requires [Microsoft Visual Studio 2015](https://www.visualstudio.com/) or newer 
 
 ## Example
 ```c
+// Pointer types are allowed everywhere
 bool BinarySearch(uint32* array, uint32 size, uint32 key, uint32* index) {
     uint32 low, high, mid;
     low = 0;
@@ -52,12 +54,15 @@ bool BinarySearch(uint32* array, uint32 size, uint32 key, uint32* index) {
 }
 
 uint8 Main() {
+    // Print to console
     PrintString("Example application - Binary search\r\n");
     PrintNewLine();
     PrintString("Enter size of array: ");
+    // Read user input
     uint32 size = ReadUint32();
     PrintNewLine();
 
+    // Allocate memory on heap
     uint32* array = alloc<uint32>(size);
     if (array == null) {
         PrintString("Cannot allocate required memory block!\r\n");
@@ -86,6 +91,7 @@ uint8 Main() {
     PrintNewLine();
     
     uint32 index = 0;
+    // Call method with one parameter passed by reference
     bool found = BinarySearch(array, size, key, &index);
     if (found == true) {
         PrintString("The number found on position: ");
@@ -94,7 +100,8 @@ uint8 Main() {
     } else {
         PrintString("The number was not found!\r\n");
     }
-    
+
+    // Release allocated memory
     release(array);
     return 0;
 }

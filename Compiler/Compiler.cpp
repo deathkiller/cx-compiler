@@ -420,7 +420,7 @@ void Compiler::AddLabel(const char* name, int32_t ip)
 
 void Compiler::AddStaticVariable(SymbolType type, int32_t size, const char* name)
 {
-    SymbolTableEntry* entry = AddSymbol(name, type, size, { BaseSymbolType::Unknown, 0 },
+    AddSymbol(name, type, size, { BaseSymbolType::Unknown, 0 },
         ExpressionType::Variable, 0, 0, nullptr, false);
 }
 

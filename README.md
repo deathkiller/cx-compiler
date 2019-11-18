@@ -17,6 +17,7 @@
 ## Introduction
 Compiler that supports modified version of C language and creates original DOS executables for i386 architecture. The executables run on MS-DOS, FreeDOS, 32-bit MS Windows using NTVDM, DosBox and other similar platforms. Currently supports several types of variables, pointers, dynamic memory allocation, branching and looping, includes and much more.
 
+[![Build Status](https://img.shields.io/appveyor/ci/deathkiller/cx-compiler/master.svg?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTI0IDIuNXYxOUwxOCAyNCAwIDE4LjV2LS41NjFsMTggMS41NDVWMHpNMSAxMy4xMTFMNC4zODUgMTAgMSA2Ljg4OWwxLjQxOC0uODI3TDUuODUzIDguNjUgMTIgM2wzIDEuNDU2djExLjA4OEwxMiAxN2wtNi4xNDctNS42NS0zLjQzNCAyLjU4OXpNNy42NDQgMTBMMTIgMTMuMjgzVjYuNzE3eiI+PC9wYXRoPjwvc3ZnPg==)](https://ci.appveyor.com/project/deathkiller/cx-compiler)
 [![Code Quality](https://img.shields.io/codacy/grade/06fe278f2bdf43768bcc3615a482e42a.svg?logo=codacy&logoColor=ffffff)](https://www.codacy.com/app/deathkiller/cx-compiler)
 [![License](https://img.shields.io/github/license/deathkiller/cx-compiler.svg)](https://github.com/deathkiller/cx-compiler/blob/master/LICENSE)
 [![Lines of Code](https://img.shields.io/badge/lines%20of%20code-10k-blue.svg)](https://github.com/deathkiller/cx-compiler/graphs/code-frequency)
